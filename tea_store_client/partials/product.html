@@ -1,0 +1,31 @@
+<div id="main_block" ng-init="init()">
+
+    <div class="product_body" style="padding-top: 15px;">
+        
+        <h1 class="product_name" style="color: #48cc3a">{{product.Name}}</h1>
+
+        <div class="product_price">
+            <span ng-if="product.Discount_prc == null || product.Discount_prc == undefined">Price</span>
+            <span ng-if="product.Discount_prc != null && product.Discount_prc != undefined">Discounted Price</span>: ${{product.Price*(1-(product.Discount_prc/100))}}</div>
+        <div class="product_discount" ng-if="product.Discount_prc != null && product.Discount_prc != undefined">Discount: %{{product.Discount_prc}}</div>
+        <div class="product_category" >Category: <a  ng-href="#/search/{{productCategory.Id}}">{{product.Category_name}}</a></div>
+        <div class="product_image"><img ng-src="{{product.Image_path}}" /></div>
+        <div class="product_features">Properties:
+            <ul>
+                <li ng-repeat="baseFeature in product.features"><a ng-href="#/search//{{baseFeature.Id}}" >{{baseFeature.Name}}</a></li>
+            </ul>
+        </div>
+        <div style="padding-top: 18px">
+            <button class="addcart" ng-click="addCart(product,undefined,1)" ng-show="!isInCart"></button>
+            <div ng-show="isInCart">
+                <div ng-show="afterAdd">Added Successfully <a href="#/cart">Go To Shopping cart</a></div>
+                <div ng-show="afterChange">Quantity Changed Successfuly</div>
+                <input type="number"  ng-model="quantity"/>
+                <button ng-click="addCart(undefined,product.Id,quantity)">Update Quantity In Cart</button>
+                <button ng-click="addCart(undefined,product.Id,0)">Remove From Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

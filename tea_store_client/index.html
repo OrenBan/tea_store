@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="TeaStoreApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" href="js/src/slider/rzslider.css" />
+
+</head>
+
+<body data-ng-controller="MasterController">
+<div id="header">
+    <div ng-include="'templates/header.html'"></div>
+</div>
+<div id="wrapper" style="    min-height: 400px;">
+    <div id="content_inside">
+    <div ng-include="'templates/categoriesBar.html'" ></div>
+        <div data-ng-view=""></div>
+    </div>
+</div>
+
+<div ng-include="'templates/footer.html'"></div>
+
+
+
+
+<map name="Map">
+    <area shape="rect" coords="78,45,312,119" href="index.html">
+    <area shape="poly" coords="670,87,719,78,727,123,677,130" href="#/main">
+    <area shape="poly" coords="776,124,818,152,793,189,751,160" href="#/logout">
+    <area shape="poly" coords="834,52,885,61,878,105,828,96"  href="#/cart">
+</map>
+
+
+<!--SOURCES-->
+<script src="js/src/jquery.min.js"></script>
+<script src="js/src/jquery.blockUI.js"></script>
+<script src="js/src/Utilities.js"></script>
+<script src="js/src/bootbox.js"></script>
+<script src="js/src/linq.js"></script>
+<script src="js/src/angular.js"></script>
+<script src="js/src/angular-route.js"></script>
+<script src="js/src/angular-resource.js"></script>
+<script src="js/src/angular-httpAuthRetryModule.js"></script>
+<script src="js/src/angular-webstorage.min.js"></script>
+
+
+<script src="js/app.js"></script>
+<script src="config.js"></script>
+
+
+<script src="js/controllers/masterController.js"></script>
+<script src="js/controllers/mainController.js"></script>
+<script src="js/controllers/productController.js"></script>
+<script src="js/controllers/shoppingCartController.js"></script>
+<script src="js/controllers/logoutController.js"></script>
+<script src="js/controllers/searchController.js"></script>
+
+<script src="js/directives/productBoxDirective.js"></script>
+<script src="js/src/checklist-model.js"></script>
+
+<script src="js/services/angular-httpProviderInterceptor.js"></script>
+<script src="js/services/httpRemoteService.js"></script>
+<script src="js/services/mainService.js"></script>
+<script src="js/services/cartService.js"></script>
+</body>
+</html>

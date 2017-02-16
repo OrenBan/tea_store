@@ -1,0 +1,8 @@
+<div class="item">
+    <span class="itemName" ng-click="openProduct(productobj.Id,productobj.Name)">{{productobj.Name}}</span>
+    <img ng-click="openProduct(productobj.Id,productobj.Name)" ng-src="{{productobj.Image_path}}" alt="" width="202" height="173" /><br />
+    <span ng-click="openProduct(productobj.Id,productobj.Name)">${{productobj.Price*(1-(productobj.Discount_prc/100))}}</span>
+    <span ng-click="openProduct(productobj.Id,productobj.Name)" style="color: red;" ng-if="productobj.Discount_prc != null && productobj.Discount_prc != undefined"><strike>${{productobj.Price}}</strike></span>
+    <a ng-click="openProduct(productobj.Id,productobj.Name)" href="{{productobj.Id}}" class="view"></a>
+  <!--  <a ng-click="addToCart(productobj)" class="buy">Add to cart</a> -->
+</div>

@@ -1,0 +1,19 @@
+<div id="main_block" ng-init="init()">
+    <div style="padding-top: 10px">
+        <h1 style="color:black">Shopping Cart</h1>
+        <div style="width: 400px;height: 50px;padding-top: 80px" ng-repeat="cartItem in cartItems" ng-show="displayCart ">
+            <img ng-src="{{cartItem.product.Image_path}}" style="float: left;width: 50px;height: 50px" />
+            <div style="color: #48cc3a">{{cartItem.product.Name}}</div>
+            <input style="    display: block;" type="number"  ng-model="cartItem.quantity"/>
+            <button ng-click="addCart(cartItem.product.Id,cartItem.quantity)">Update Quantity In Cart</button>
+            <button ng-click="addCart(cartItem.product.Id,0)">Remove From Cart</button>
+
+        </div>
+        <div ng-show="!displayCart">
+            <img src="images/empty_cart.png" style="    width: 21%;" />
+        </div>
+    </div>
+    <div style="padding-top: 40px;    width: 20%;" ng-click="checkout()">
+        Checkout<img src="images/Go_to_Checkout-128.png" style="    width: 40px;" >
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div id="main_block" ng-init="init()">
+
+    <div class="about">
+        <h1></h1><br />
+        <p></p>
+    </div>
+    <div data-role="main" class="news" style="width: 92%;height: 82px;">
+        <div>
+            <input type="text" placeholder="Search For.." ng-model="filter.Name">
+        </div>
+        <div style="float: left;width: 98%;">
+            <div style="float: left">
+                <div>From Price:<input type="number" ng-model="filter.FromPrice" /></div>
+                <div>To Price:<input type="number" ng-model="filter.ToPrice" />
+                </div>
+                <div>
+                    Sale Products <input type="checkbox" ng-model="filter.IsInSale" ng-true-value="1" ng-false-value="0">
+                </div>
+            </div>
+            <div style="float: right;">
+                <div>
+                    Category: <select ng-options="cat.Id as cat.Name for cat in generalParameters.baseData.categories" ng-model="filter.CategoryId" ></select>
+                </div>
+
+            </div>
+            <div>
+                <label ng-repeat="feature in generalParameters.baseData.features">
+                    <input type="checkbox" checklist-model="filter.ProductFeaturesArray" checklist-value="feature.Id" > {{feature.Name}}
+                </label>
+            </div>
+
+        </div>
+
+        <div style="float: right">
+    <button ng-click="searchProducts()">Search</button>
+        </div>
+    </div>
+    <div id="items">
+        <div ng-repeat="prod in foundedProducts" product-box productobj="prod"></div>
+    </div>
+
+</div>

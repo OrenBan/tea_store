@@ -1,0 +1,15 @@
+<div id="main_block" ng-init="init()">
+
+    <div class="about">
+        <h1>Our Products</h1><br />
+        <p>At Abbott, we're all about helping you live the best life you can through good health. We keep your heart healthy, nourish your body at every stage of life, help you see clearly, and bring you information and medicines to manage your health. Every day and around the world, we’re discovering new ways to make life better.</p>
+    </div>
+    <div class="news">
+        <img src="images/title3.gif" alt="" width="69" height="30" /><br />
+        <p>Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub native to Asia.[3] After water, it is the most widely consumed drink in the world.[4] There are many different types of tea; some teas, like Darjeeling and Chinese greens, have a cooling, slightly bitter, and astringent flavour,[5] while others have vastly different profiles that include sweet, nutty, floral or grassy notes.</p>
+    </div>
+    <div id="items">
+        <div ng-repeat="prod in foundedProducts" product-box productobj="prod"></div>
+    </div>
+
+</div>
