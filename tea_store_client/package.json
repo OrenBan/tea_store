@@ -1,0 +1,13 @@
+{
+  "name": "tea_store_client",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "browser-sync start --server --port 3000"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  }
+}

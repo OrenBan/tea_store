@@ -1,6 +1,6 @@
 ﻿
-app.controller('MasterController', ['$scope', '$http', '$location', '$window', '$route', '$routeParams', '$q','webStorage', 'MainService','SITE_URL',
-function ($scope, $http, $location, $window, $route, $routeParams,$q,webStorage,  MainService,SITE_URL) {
+app.controller('MasterController', ['$scope', '$http', '$location', '$window', '$route', '$routeParams', '$q','webStorage', 'MainService',
+function ($scope, $http, $location, $window, $route, $routeParams,$q,webStorage,  MainService) {
 
 $scope.generalParameters = {
     baseData:undefined,
